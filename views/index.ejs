@@ -1,0 +1,71 @@
+<html>
+<body>
+
+    <h1>Student Information Page </h1>
+
+    <p>
+        <form action="/studentInfo" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>First Name:</label></td>
+                    <td>
+                        <input type="text" name="firstName" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Last Name:</label></td>
+                    <td>
+                        <input type="text" name="lastName" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Degree:</label></td>
+                    <td>
+                        <input type="text" name="degree" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Program:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="program" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Graduation Year:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="graduation" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="email" size="40" />
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Get Info" />
+
+        </form>
+    </p>
+    <p>
+        This form was submitted <%= count %> times.
+    </p>
+    <a href="/studentInfo/displayAll">List all the Students</a>
+
+    <h4>Search for a Student</h4>
+    <form action = "/studentInfo/displayOne" method = "POST">
+        <input type = "text" name = "firstName" />
+        <input type = "submit" value = "SEARCH" />
+    </form>
+</body>
+</html>

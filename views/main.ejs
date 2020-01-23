@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Student Info Page</title>
+     <link href="/assets/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <% include image.ejs %>
+    <div class="main">
+        <table id="student">
+            <tr>
+                <th>Student Name</th>
+                <th>Degree</th>
+                <th>Program</th>
+                <th>Graduation Year</th>
+                <th>Email</th>
+            </tr>
+            <%for(var i=0 ; i < student.length ; i++){%>
+           <tr>
+            <td>
+                <%= student[i].firstName %>
+                <%= student[i].lastName %>
+            </td>
+            <td>
+              <%= student[i].degree %>
+            </td>
+            <td>
+              <%= student[i].program %>
+            </td>
+            <td>
+            <%= student[i].graduation %>
+          </td>
+          <td>
+            <%= student[i].email %>
+          </td>
+           </tr>
+           <%}%>
+        </table>
+    </div>
+</body>
+
+</html>
